@@ -10,10 +10,12 @@ import Graphics.Declarative.Border
 import Graphics.Declarative.Bordered
 import Graphics.Declarative.Cairo.Form
 
+import Linear
+
 -- Origin on top-left
 svgForm :: SVG -> Form
 svgForm svg
-  = Bordered (fromBoundingBox ((0, 0), (fromIntegral w, fromIntegral h))) $ primitive $ do
+  = Bordered (fromBoundingBox (V2 0 0, V2 (fromIntegral w) (fromIntegral h))) $ primitive $ do
       success <- svgRender svg
       unless success $ liftIO $
         putStrLn "Warning: Couldn't render SVG. (Graphics.Declarative.Util.SVG)"

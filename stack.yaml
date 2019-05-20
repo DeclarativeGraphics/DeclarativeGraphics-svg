@@ -1,0 +1,8 @@
+flags: {}
+packages:
+- .
+- ../DeclarativeGraphics
+- ../DeclarativeGraphics-Cairo
+extra-deps:
+- svgcairo-0.13.1.1
+resolver: lts-12.19

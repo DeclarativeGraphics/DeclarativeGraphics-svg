@@ -1,4 +1,6 @@
 /dist
+/dist-newstyle
 /LICENSE
 /.cabal-sandbox
 /cabal.sandbox.config
+/.stack-work
